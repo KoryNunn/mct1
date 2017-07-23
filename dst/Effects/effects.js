@@ -1,11 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-var env = require("../util/env");
 function effects(type, opts) {
     if (opts === void 0) { opts = {}; }
-    if (env.isNode) {
-        return type;
-    }
     var magik = magikcraft.io;
     var PotionEffect = magik.type("potion.PotionEffect");
     var PotionEffectType = magik.type("potion.PotionEffectType");

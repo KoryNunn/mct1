@@ -32,5 +32,5 @@ test('the monitor starts and functions', done => {
         done();
     }
     testMonitor.start();
-    setTimeout(() => callback(), 5500);
+    setTimeout(callback, 5500);
 })

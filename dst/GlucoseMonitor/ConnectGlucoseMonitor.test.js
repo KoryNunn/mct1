@@ -14,5 +14,5 @@ test('the monitor starts and functions', function (done) {
         done();
     }
     testConnectMonitor.start();
-    setTimeout(function () { return callback(); }, 500);
+    setTimeout(callback, 500);
 });

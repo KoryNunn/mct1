@@ -14,7 +14,7 @@ var BGLBar_1 = require("./BGLBar");
 var GlucoseMonitor_1 = require("../GlucoseMonitor");
 var BGLBarGlucoseMonitor = (function (_super) {
     __extends(BGLBarGlucoseMonitor, _super);
-    function BGLBarGlucoseMonitor(player, sampleRate) {
+    function BGLBarGlucoseMonitor(environment, player, sampleRate) {
         var _this = _super.call(this, player, sampleRate) || this;
         // Pass the player's BGL in to the bar, so the bar has access to its range alerts.
         _this.BGLBar = new BGLBar_1.BGLBar(_this.player.BGL, {

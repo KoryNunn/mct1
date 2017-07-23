@@ -1,5 +1,4 @@
 import { effects } from '../Effects/effects';
-import * as env from '../util/env';
 import { thresholds } from './bgl-alerts';
 
 enum BGLunits {
@@ -25,12 +24,10 @@ export class BGL {
     private say: (msg: string) => void;
     private effects: (effect: string) => void;
 
-    constructor() {
+    constructor(environment) {
         this._bgl = BGL.InitialLevel;
-        this.say = (env.isNode) ? console.log
-            : magikcraft.io.dixit;
-        this.effects = (env.isNode) ? console.log
-            : effects;
+        this.say = environment.log;
+        this.effects = environment.effects;
     }
 
     getBGL(units: BGLunits = BGLunits.mmolL): number {

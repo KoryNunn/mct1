@@ -1,10 +1,6 @@
 import { MCT1 } from '../types/mct1';
-import * as env from '../util/env';
 
 export function effects(type: string, opts: any = {}) {
-    if (env.isNode) {
-        return type;
-    }
 
     const magik = magikcraft.io;
     const PotionEffect = magik.type("potion.PotionEffect");

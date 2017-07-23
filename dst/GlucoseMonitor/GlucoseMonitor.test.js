@@ -39,5 +39,5 @@ test('the monitor starts and functions', function (done) {
         done();
     }
     testMonitor.start();
-    setTimeout(function () { return callback(); }, 5500);
+    setTimeout(callback, 5500);
 });

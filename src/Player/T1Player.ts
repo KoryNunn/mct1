@@ -1,18 +1,16 @@
 import { Insulin } from '../Insulin/Insulin';
 import { Carbohydrate } from '../Carbs/Carbohydrate';
 import { BGL } from '../BGL/BGL';
-import * as env from '../util/env';
 
 export class T1Player {
     public BGL: BGL;
     public name: string;
 
-    constructor(name = "default") {
+    constructor(mct1) {
 
-        this.BGL = new BGL();
+        this.BGL = new BGL(mct1);
 
-        this.name = (env.isNode) ? name
-            : magikcraft.io.getSender().getName();
+        this.name = mct1.environment.getName();
 
     }
 
